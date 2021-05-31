@@ -1,0 +1,52 @@
+@media screen and (min-width:600px){
+    .card{
+        flex-direction: row;
+        max-width: 75rem;
+        
+    }
+    .image-data{
+        flex-basis: 40%;
+        height: unset;
+    }
+    .publication-details{
+        transform: translateX(-100%);
+        transition: transform .5s;
+    }
+    .card:hover .publication-details{
+        transform: translateX(0);
+    }
+    .author{
+        transform: translateY(-3rem);
+        opacity: 0;
+        transition-delay: .3;
+    }
+    .date{
+        transform: translateY(3rem);
+        opacity: 0;
+        transition: all .5s .3s;
+    }
+
+    .card:hover .author,
+    .card:hover .date{
+        transform:translateY(0);
+        opacity: 1;
+    }
+
+
+    .post-data{
+        flex-basis: 60%;
+    }
+
+    .post-data::before{
+        content: '';
+        width: 3.5rem;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: -1.5rem;
+        z-index: 10;
+        transform: skewX(-5deg);
+
+    }
+}
